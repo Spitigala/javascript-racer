@@ -1,15 +1,14 @@
 function prepareGame() {
-    var board = new drawBoard(20);
+    var cellCount = 20
+    var board = new Board(cellCount);
     var player1 = new Player('Player1');
     var player2 = new Player('Player2');
-    startGame(board, player1, player2);
+    startGame(cellCount, player1, player2);
 }
 
 
-function drawBoard(cells) {
-    this.cells = cells
-
-    for(cell=0; cell < cells; cell++) {
+function Board(cell_count) {
+    for(cell=0; cell < cell_count; cell++) {
         $('.active').after('<td></td>');
     };
 }

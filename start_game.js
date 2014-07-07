@@ -1,4 +1,4 @@
-function startGame (board, player1, player2) {
+function startGame (cell_count, player1, player2) {
 
     var player1_position = player1.position
     var player2_position = player2.position
@@ -11,21 +11,21 @@ function startGame (board, player1, player2) {
     $("body").keyup(function(e){
         var keycode = (e.keyCode ? event.keyCode : event.which);
 
-        if (keycode == 65 && player1_position < board.cells) {
+        if (keycode == 65 && player1_position < cell_count) {
             player1_position += 1;
             update_player_position(1, player1_position);
         }
 
-        if (keycode == 76 && player2_position < board.cells) {
+        if (keycode == 76 && player2_position < cell_count) {
             player2_position += 1;
             update_player_position(2, player2_position);
         }
 
-        if (player1_position == board.cells) {
+        if (player1_position == cell_count) {
             alert('Player 1 wins');
         }
 	        
-        if (player2_position == board.cells) {
+        if (player2_position == cell_count) {
             alert('Player 2 wins');
         }
     });
