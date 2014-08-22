@@ -1,32 +1,32 @@
-function startGame (cell_count, player1, player2) {
-
-    var player1_position = player1.position
-    var player2_position = player2.position
-
-    function updatePlayerPosition(player_number, position){
-        $("#player"+player_number+"_strip td").removeClass();
-        $("#player"+player_number+"_strip td").eq(position).addClass("active");
-    };
-
-    $("body").keyup(function(e){
-        var keycode = (e.keyCode ? event.keyCode : event.which);
-
-        if (keycode == 65 && player1_position < cell_count) {
-            player1_position += 1;
-            updatePlayerPosition(1, player1_position);
+function startGame (cellCount, player1, player2) {
+ 
+        var player1Position = player1.position;
+        var player2Position = player2.position;
+ 
+        function updatePlayerPosition(playerNumber, position) {
+            $("#player"+playerNumber+"_strip td").removeClass();
+            $("#player"+playerNumber+"_strip td").eq(position).addClass("active");
         }
-
-        if (keycode == 76 && player2_position < cell_count) {
-            player2_position += 1;
-            updatePlayerPosition(2, player2_position);
-        }
-
-        if (player1_position == cell_count) {
-            alert(player1.player_name + ' wins');
-        }
-	        
-        if (player2_position == cell_count) {
-            alert(Player2.player_name + ' wins');
-        }
-    });
+ 
+        $("body").keyup(function(e){
+            var keycode = (e.keyCode ? event.keyCode : event.which);
+ 
+            if (keycode == 65 && player1Position < cellCount) {
+                player1_position += 1;
+                updatePlayerPosition(1, player1Position);
+            }
+ 
+            if (keycode == 76 && player2Position < cellCount) {
+                player2Position += 1;
+                updatePlayerPosition(2, player2Position);
+            }
+ 
+            if (player1Position == cellCount) {
+                alert(player1.playerName + ' wins');
+            }
+ 
+            if (player2Position == cellCount) {
+                alert(Player2.playerName + ' wins');
+            }
+        });
 }
