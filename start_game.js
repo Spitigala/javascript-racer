@@ -12,7 +12,7 @@ function startGame (cellCount, player1, player2) {
             var keycode = (e.keyCode ? event.keyCode : event.which);
  
             if (keycode == 65 && player1Position < cellCount) {
-                player1_position += 1;
+                player1Position += 1;
                 updatePlayerPosition(1, player1Position);
             }
  
