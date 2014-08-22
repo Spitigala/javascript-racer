@@ -1,9 +1,9 @@
 function prepareGame() {
-        var cellCount = 20;
-        var board = new drawBoard(cellCount);
-        var player1 = new Player('Player1');
-        var player2 = new Player('Player2');
-        startGame(cellCount, player1, player2);
+    var cellCount = 20;
+    var board = new drawBoard(cellCount);
+    var player1 = new Player('Player1');
+    var player2 = new Player('Player2');
+    startGame(cellCount, player1, player2);
 }
  
  
